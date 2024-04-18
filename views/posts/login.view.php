@@ -20,7 +20,9 @@ require "views/auth/navbar.php";
     </label>
     <button>register</button>
 </form>
-
-<?php 
+<?php if (isset($_SESSION["flash"])) {?>
+    <p class="flash"><?= $_SESSION["flash"] ?></p>
+<?php } ?>
+<?php
 require "views/auth/footer.php";
 ?>

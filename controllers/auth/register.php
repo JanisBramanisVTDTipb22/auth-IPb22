@@ -1,5 +1,7 @@
 <?php
 
+guest();
+
 require "Validator.php";
 require "Database.php";
 $config = require("./config.php");
@@ -33,8 +35,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $db->execute($query, $params);
     }
 
-    $_POST["email"];
-    $_POST["password"];
+    $_SESSION["flash"] = "Tu esi veiksmīgi reģistrēts";
+    header("Location: /login");
+    die();
 }
 
 $title = "Register";

@@ -21,6 +21,8 @@ require "views/auth/navbar.php";
     <button>register</button>
 </form>
 
+
+
 <?php 
 require "views/auth/footer.php";
 ?>
